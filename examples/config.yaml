@@ -1,0 +1,9 @@
+# 虚构的本地任务配置，仅用于 YAML 语法检查。
+project:
+  name: demo-project
+  enabled: true
+tasks:
+  - name: format-check
+    timeout_seconds: 30
+  - name: syntax-check
+    timeout_seconds: 60
