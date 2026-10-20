@@ -1,0 +1,29 @@
+{
+  "version": "1.0.0",
+  "reviewed_on": "2026-10-20",
+  "source": "https://raw.githubusercontent.com/StevenBlack/hosts/db80be797ba5c17ba3bfa5094ed94508b41e716f/hosts",
+  "source_commit": "db80be797ba5c17ba3bfa5094ed94508b41e716f",
+  "source_sha256": "af019612ef8c1239762033947cfd70716c1d53dab78541b9d924f1966f2e6170",
+  "license": "MIT",
+  "scope": "Manually selected exact advertising hosts only; not an automatic mirror.",
+  "domains": [
+    "ad.doubleclick.net",
+    "googleads.g.doubleclick.net",
+    "pubads.g.doubleclick.net",
+    "securepubads.g.doubleclick.net",
+    "pagead2.googlesyndication.com",
+    "tpc.googlesyndication.com",
+    "adservice.google.com",
+    "ade.googlesyndication.com",
+    "cpro.baidu.com",
+    "adm.baidu.com",
+    "adsfile.qq.com",
+    "adslvfile.qq.com",
+    "sdk.e.qq.com",
+    "mi.gdt.qq.com",
+    "ad.xiaomi.com",
+    "sdkconfig.ad.xiaomi.com",
+    "api.ad.xiaomi.com",
+    "adserver.unityads.unity3d.com"
+  ]
+}

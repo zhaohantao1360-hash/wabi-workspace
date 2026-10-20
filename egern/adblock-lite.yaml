@@ -1,0 +1,87 @@
+# Egern native YAML module, v1.0.0
+# Exact-host REJECT only. No MITM, scripts, DNS overrides, or remote rule sets.
+# Selected domain entries: StevenBlack/hosts (MIT), snapshot db80be797ba5c17ba3bfa5094ed94508b41e716f.
+# Source: https://raw.githubusercontent.com/StevenBlack/hosts/db80be797ba5c17ba3bfa5094ed94508b41e716f/hosts
+# This is a small selection, not the full upstream list and not an upstream endorsement.
+# Third-party license for selected entries:
+# The MIT License (MIT)
+#
+# Copyright © 2026 Steven Black
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy of
+# this software and associated documentation files (the “Software”), to deal in
+# the Software without restriction, including without limitation the rights to
+# use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+# of the Software, and to permit persons to whom the Software is furnished to do
+# so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+# FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+# COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+# IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+# CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+name: "基础去广告 · 无需解密"
+description: "18 条精确广告域名阻断规则；不含证书或脚本，非全能去广告。"
+author: "Wabi-assisted examples"
+homepage: "https://github.com/zhaohantao1360-hash/wabi-workspace/tree/main/egern"
+manual: "https://github.com/zhaohantao1360-hash/wabi-workspace/blob/main/egern/README.md"
+rules:
+  - domain:
+      match: "ad.doubleclick.net"
+      policy: REJECT
+  - domain:
+      match: "googleads.g.doubleclick.net"
+      policy: REJECT
+  - domain:
+      match: "pubads.g.doubleclick.net"
+      policy: REJECT
+  - domain:
+      match: "securepubads.g.doubleclick.net"
+      policy: REJECT
+  - domain:
+      match: "pagead2.googlesyndication.com"
+      policy: REJECT
+  - domain:
+      match: "tpc.googlesyndication.com"
+      policy: REJECT
+  - domain:
+      match: "adservice.google.com"
+      policy: REJECT
+  - domain:
+      match: "ade.googlesyndication.com"
+      policy: REJECT
+  - domain:
+      match: "cpro.baidu.com"
+      policy: REJECT
+  - domain:
+      match: "adm.baidu.com"
+      policy: REJECT
+  - domain:
+      match: "adsfile.qq.com"
+      policy: REJECT
+  - domain:
+      match: "adslvfile.qq.com"
+      policy: REJECT
+  - domain:
+      match: "sdk.e.qq.com"
+      policy: REJECT
+  - domain:
+      match: "mi.gdt.qq.com"
+      policy: REJECT
+  - domain:
+      match: "ad.xiaomi.com"
+      policy: REJECT
+  - domain:
+      match: "sdkconfig.ad.xiaomi.com"
+      policy: REJECT
+  - domain:
+      match: "api.ad.xiaomi.com"
+      policy: REJECT
+  - domain:
+      match: "adserver.unityads.unity3d.com"
+      policy: REJECT

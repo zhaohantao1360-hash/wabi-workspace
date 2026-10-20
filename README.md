@@ -31,3 +31,9 @@ python3 -m venv .venv
 ## 范围
 
 当前没有自动部署、GitHub Actions 工作流或外部服务集成。示例中的名称和数值均为虚构，不含真实节点、账号或凭据。
+
+## Egern 基础去广告模块
+
+[使用与导入说明](egern/README.md) · [原生 YAML 模块](egern/adblock-lite.yaml)
+
+18 条精确广告域名阻断规则，不需 HTTPS 解密、证书或脚本。基础版覆盖有限；已做本地结构与规则检查，未做 Egern 真机实测。
