@@ -36,4 +36,4 @@ python3 -m venv .venv
 
 [使用与导入说明](egern/README.md) · [原生 YAML 模块](egern/adblock-lite.yaml)
 
-18 条精确广告域名阻断规则，不需 HTTPS 解密、证书或脚本。基础版覆盖有限；已做本地结构与规则检查，未做 Egern 真机实测。
+v2：396 条广告网络规则（219 条子域匹配、177 条精确匹配），扩展 Pangle、快手、广点通、百度、Tanx、AppLovin 等覆盖，不需 HTTPS 解密、证书或脚本。来源冻结、许可及回退方法见说明；已做本地检查，未做 Egern 真机实测。

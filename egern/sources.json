@@ -1,12 +1,2499 @@
 {
-  "version": "1.0.0",
+  "version": "2.0.0",
   "reviewed_on": "2026-10-20",
-  "source": "https://raw.githubusercontent.com/StevenBlack/hosts/db80be797ba5c17ba3bfa5094ed94508b41e716f/hosts",
-  "source_commit": "db80be797ba5c17ba3bfa5094ed94508b41e716f",
-  "source_sha256": "af019612ef8c1239762033947cfd70716c1d53dab78541b9d924f1966f2e6170",
-  "license": "MIT",
-  "scope": "Manually selected exact advertising hosts only; not an automatic mirror.",
-  "domains": [
+  "reference_review": {
+    "url": "https://raw.githubusercontent.com/zhaohantao1360-hash/Hark/main/BlockAdvertisers-hark.yaml",
+    "sha256": "405399351c97f62f7872dbf5f4417b2a8df51967f0af3992c4c0604d0f3a0bc9",
+    "rule_count": 330,
+    "url_rewrite_count": 4,
+    "mitm_host_count": 3,
+    "use": "Design reference only. No bulk copying; no MITM, rewrites, keywords, IP rules, push/verification/deep-link blocking or forced DIRECT overrides adopted. Rebuilt advertising-only selection from independently licensed sources."
+  },
+  "license": "GPL-3.0-only; MIT notices retained for StevenBlack portions",
+  "sources": {
+    "hagezi-light": {
+      "source": "https://raw.githubusercontent.com/hagezi/dns-blocklists/1af20e9f7499a9869b54acf600f0a5650bf93e5e/wildcard/light-onlydomains.txt",
+      "source_commit": "1af20e9f7499a9869b54acf600f0a5650bf93e5e",
+      "source_sha256": "ecd37fea9ea54f49871651eba0e8fc15bb818515fe42ed428695004aed09deac",
+      "license": "GPL-3.0-only",
+      "homepage": "https://github.com/hagezi/dns-blocklists",
+      "semantics": "Native suffix entries selected from domain-only wildcard source."
+    },
+    "stevenblack": {
+      "source": "https://raw.githubusercontent.com/StevenBlack/hosts/db80be797ba5c17ba3bfa5094ed94508b41e716f/hosts",
+      "source_commit": "db80be797ba5c17ba3bfa5094ed94508b41e716f",
+      "source_sha256": "af019612ef8c1239762033947cfd70716c1d53dab78541b9d924f1966f2e6170",
+      "license": "MIT",
+      "semantics": "Exact hosts only; never infer suffix scope from a hosts entry."
+    }
+  },
+  "platform_scopes": {
+    "Google 广告": [
+      "doubleclick.net",
+      "doubleclick-cn.net",
+      "googlesyndication.com",
+      "googlesyndication-cn.com",
+      "googleadservices.com"
+    ],
+    "腾讯广告": [
+      "gdt.qq.com",
+      "gdtimg.com",
+      "ugdtimg.com",
+      "l.qq.com",
+      "sdk.e.qq.com",
+      "tangram.e.qq.com",
+      "pgdt.gtimg.cn",
+      "adsfile.qq.com",
+      "adslvfile.qq.com",
+      "adsmind.gdtimg.com",
+      "adsmind.ugdtimg.com",
+      "ads.privacy.qq.com"
+    ],
+    "百度广告": [
+      "mobads.baidu.com",
+      "mobads-logs.baidu.com",
+      "mobads-pre-config.cdn.bcebos.com",
+      "cpro.baidu.com",
+      "cpro.baidustatic.com",
+      "adm.baidu.com",
+      "afd.baidu.com",
+      "als.baidu.com",
+      "eclick.baidu.com",
+      "wn.pos.baidu.com"
+    ],
+    "字节 Pangle 广告": [
+      "pangle.io",
+      "pangleglobal.com",
+      "byteadverts.com",
+      "lf-ad-ies.bytecdn.cn"
+    ],
+    "快手广告": [
+      "adkwai.com",
+      "adukwai.com",
+      "open.e.kuaishou.com",
+      "open.e.kuaishou.cn",
+      "adtrack.e.kuaishou.com",
+      "gdfp.gifshow.com"
+    ],
+    "阿里 Tanx / 汇川广告": [
+      "tanx.com",
+      "huichuan.sm.cn",
+      "huichuan-mc.sm.cn",
+      "hc-ssp.sm.cn"
+    ],
+    "小米广告": [
+      "ad.xiaomi.com"
+    ],
+    "Unity / ironSource 广告": [
+      "iads.unity3d.com",
+      "unityads.unity3d.com",
+      "unityads.unitychina.cn",
+      "supersonicads.com"
+    ],
+    "AppLovin / Vungle 广告": [
+      "applovin.com",
+      "applvn.com",
+      "vungle.com"
+    ],
+    "其他移动广告联盟": [
+      "inmobi.com",
+      "inmobi.cn",
+      "inmobicdn.net",
+      "tapjoy.com",
+      "adsmoloco.com",
+      "amazon-adsystem.com",
+      "toponad.com",
+      "toponadss.com",
+      "anythinktech.com",
+      "sigmob.cn",
+      "tradplusad.com",
+      "domob.cn",
+      "adwangmai.com",
+      "adsrvr.org",
+      "adn-plus.com.cn",
+      "ad-scope.com.cn",
+      "beizi.biz"
+    ]
+  },
+  "entries": [
+    {
+      "kind": "domain_suffix",
+      "match": "ad.ae.doubleclick.net",
+      "group": "Google 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "ad.at.doubleclick.net",
+      "group": "Google 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "ad.au.doubleclick.net",
+      "group": "Google 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "ad.de.doubleclick.net",
+      "group": "Google 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "afs.googleadservices.com",
+      "group": "Google 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "dmp.doubleclick.net",
+      "group": "Google 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "doubleclick-cn.net",
+      "group": "Google 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "ff.doubleclick.net",
+      "group": "Google 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "fls.doubleclick.net",
+      "group": "Google 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "g.doubleclick.net",
+      "group": "Google 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "googlesyndication.com",
+      "group": "Google 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "m.doubleclick.net",
+      "group": "Google 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "mediavisor.doubleclick.net",
+      "group": "Google 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "n4052ad.doubleclick.net",
+      "group": "Google 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "pagead2.googleadservices.com",
+      "group": "Google 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "partnerad.l.doubleclick.net",
+      "group": "Google 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "static.doubleclick.net",
+      "group": "Google 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "stats.l.doubleclick.net",
+      "group": "Google 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "td.doubleclick.net",
+      "group": "Google 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "tpc.googlesyndication-cn.com",
+      "group": "Google 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain",
+      "match": "ad-ace.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ad-apac.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ad-emea.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ad-g.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ad.ar.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ad.be.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ad.bg.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ad.br.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ad.ca.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ad.ch.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ad.cl.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ad.cn.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ad.dk.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ad.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ad.es.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ad.fi.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ad.fr.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ad.gr.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ad.hk.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ad.hr.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ad.hu.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ad.ie.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ad.in.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ad.it.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ad.jp.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ad.kr.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ad.mo.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ad.my.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ad.n2434.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ad.nl.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ad.no.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ad.nz.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ad.pl.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ad.pt.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ad.ro.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ad.rs.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ad.ru.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ad.se.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ad.sg.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ad.si.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ad.terra.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ad.th.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ad.tw.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ad.uk.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ad.us.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ad.ve.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ad.za.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ad2.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ads-bid.l.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "creatives.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "dart.l.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "dfp.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "fls.au.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "fls.uk.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "g1.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "gan.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "googleadservices.com",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ir.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "iv.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "n4061ad.hk.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "n4061ad.jp.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "n4403ad.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "n479ad.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "pagead.l.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "pagead46.l.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "partner.googleadservices.com",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "paypalssl.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "s0.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "s2.video.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "www3.doubleclick.net",
+      "group": "Google 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "ads.privacy.qq.com",
+      "group": "腾讯广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "c.gdt.qq.com",
+      "group": "腾讯广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "c.l.qq.com",
+      "group": "腾讯广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "c2.gdt.qq.com",
+      "group": "腾讯广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "c2.l.qq.com",
+      "group": "腾讯广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "canvas-cdn.gdt.qq.com",
+      "group": "腾讯广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "cm.l.qq.com",
+      "group": "腾讯广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "gdtimg.com",
+      "group": "腾讯广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "i.gdt.qq.com",
+      "group": "腾讯广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "ii.gdt.qq.com",
+      "group": "腾讯广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "ipv4.gdt.qq.com",
+      "group": "腾讯广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "livep.l.qq.com",
+      "group": "腾讯广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "lives.l.qq.com",
+      "group": "腾讯广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "livew.l.qq.com",
+      "group": "腾讯广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "mi.gdt.qq.com",
+      "group": "腾讯广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "monitor.l.qq.com",
+      "group": "腾讯广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "nc.gdt.qq.com",
+      "group": "腾讯广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "news.l.qq.com",
+      "group": "腾讯广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "p.l.qq.com",
+      "group": "腾讯广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "p2.l.qq.com",
+      "group": "腾讯广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "pgdt.gtimg.cn",
+      "group": "腾讯广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "rpt.gdt.qq.com",
+      "group": "腾讯广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "t.gdt.qq.com",
+      "group": "腾讯广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "tangram.e.qq.com",
+      "group": "腾讯广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "ugdtimg.com",
+      "group": "腾讯广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "us.l.qq.com",
+      "group": "腾讯广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "v2.gdt.qq.com",
+      "group": "腾讯广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "v2mi.gdt.qq.com",
+      "group": "腾讯广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "v3.gdt.qq.com",
+      "group": "腾讯广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "vr.gdt.qq.com",
+      "group": "腾讯广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "win.gdt.qq.com",
+      "group": "腾讯广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "xc.gdt.qq.com",
+      "group": "腾讯广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain",
+      "match": "adsfile.qq.com",
+      "group": "腾讯广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "adslvfile.qq.com",
+      "group": "腾讯广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "hm.l.qq.com",
+      "group": "腾讯广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "imc.l.qq.com",
+      "group": "腾讯广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "l.qq.com",
+      "group": "腾讯广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "l2.l.qq.com",
+      "group": "腾讯广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "sdk.e.qq.com",
+      "group": "腾讯广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "v.gdt.qq.com",
+      "group": "腾讯广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "w.l.qq.com",
+      "group": "腾讯广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "afd.baidu.com",
+      "group": "百度广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "als.baidu.com",
+      "group": "百度广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "cpro.baidu.com",
+      "group": "百度广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "eclick.baidu.com",
+      "group": "百度广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "mobads-logs.baidu.com",
+      "group": "百度广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "mobads-pre-config.cdn.bcebos.com",
+      "group": "百度广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "mobads.baidu.com",
+      "group": "百度广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain",
+      "match": "adm.baidu.com",
+      "group": "百度广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "pangle.io",
+      "group": "字节 Pangle 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "adkwai.com",
+      "group": "快手广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "adtrack.e.kuaishou.com",
+      "group": "快手广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "gdfp.gifshow.com",
+      "group": "快手广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "open.e.kuaishou.com",
+      "group": "快手广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "p1-ad.adukwai.com",
+      "group": "快手广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "p2-ad.adukwai.com",
+      "group": "快手广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "p2-lm.adukwai.com",
+      "group": "快手广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "p3-ad.adukwai.com",
+      "group": "快手广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "p4-ad.adukwai.com",
+      "group": "快手广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "p5-ad.adukwai.com",
+      "group": "快手广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "p5-tube.adukwai.com",
+      "group": "快手广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "v1-ad.adukwai.com",
+      "group": "快手广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "v1-lm.adukwai.com",
+      "group": "快手广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "v4-ad.adukwai.com",
+      "group": "快手广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "v4-lm.adukwai.com",
+      "group": "快手广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "v5-ad.adukwai.com",
+      "group": "快手广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "cdn.tanx.com",
+      "group": "阿里 Tanx / 汇川广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "click.tanx.com",
+      "group": "阿里 Tanx / 汇川广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "cms.tanx.com",
+      "group": "阿里 Tanx / 汇川广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "df.tanx.com",
+      "group": "阿里 Tanx / 汇川广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "ef-dongfeng.tanx.com",
+      "group": "阿里 Tanx / 汇川广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "et.tanx.com",
+      "group": "阿里 Tanx / 汇川广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "hc-ssp.sm.cn",
+      "group": "阿里 Tanx / 汇川广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "huichuan-mc.sm.cn",
+      "group": "阿里 Tanx / 汇川广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "huichuan.sm.cn",
+      "group": "阿里 Tanx / 汇川广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "ifs.tanx.com",
+      "group": "阿里 Tanx / 汇川广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "kgb-ifs.tanx.com",
+      "group": "阿里 Tanx / 汇川广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "live-ifs.tanx.com",
+      "group": "阿里 Tanx / 汇川广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "opehs.tanx.com",
+      "group": "阿里 Tanx / 汇川广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "p.tanx.com",
+      "group": "阿里 Tanx / 汇川广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "rdstat.tanx.com",
+      "group": "阿里 Tanx / 汇川广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "sdk-config.tanx.com",
+      "group": "阿里 Tanx / 汇川广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "ad.xiaomi.com",
+      "group": "小米广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "ae.iads.unity3d.com",
+      "group": "Unity / ironSource 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "gw-is.iads.unity3d.com",
+      "group": "Unity / ironSource 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "gw-rv.iads.unity3d.com",
+      "group": "Unity / ironSource 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "icon-uap.iads.unity3d.com",
+      "group": "Unity / ironSource 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "img-uap.iads.unity3d.com",
+      "group": "Unity / ironSource 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "supersonicads.com",
+      "group": "Unity / ironSource 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "unityads.unity3d.com",
+      "group": "Unity / ironSource 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain",
+      "match": "cdn.iads.unity3d.com",
+      "group": "Unity / ironSource 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "config.unityads.unitychina.cn",
+      "group": "Unity / ironSource 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "img-dyn-uap.iads.unity3d.com",
+      "group": "Unity / ironSource 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "o.iads.unity3d.com",
+      "group": "Unity / ironSource 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "unityads.unitychina.cn",
+      "group": "Unity / ironSource 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "vid-uap.iads.unity3d.com",
+      "group": "Unity / ironSource 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "a.applovin.com",
+      "group": "AppLovin / Vungle 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "a4.applovin.com",
+      "group": "AppLovin / Vungle 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "applvn.com",
+      "group": "AppLovin / Vungle 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "assets.applovin.com",
+      "group": "AppLovin / Vungle 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "b.applovin.com",
+      "group": "AppLovin / Vungle 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "config.ads.vungle.com",
+      "group": "AppLovin / Vungle 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "d.applovin.com",
+      "group": "AppLovin / Vungle 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "img.applovin.com",
+      "group": "AppLovin / Vungle 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "ms-usa.applovin.com",
+      "group": "AppLovin / Vungle 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "ms.applovin.com",
+      "group": "AppLovin / Vungle 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "ms4.applovin.com",
+      "group": "AppLovin / Vungle 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "prod-bid.applovin.com",
+      "group": "AppLovin / Vungle 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "prod-mediate-events.applovin.com",
+      "group": "AppLovin / Vungle 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "r.applovin.com",
+      "group": "AppLovin / Vungle 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "re.applovin.com",
+      "group": "AppLovin / Vungle 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "res1.applovin.com",
+      "group": "AppLovin / Vungle 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "res4.applovin.com",
+      "group": "AppLovin / Vungle 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "rt.applovin.com",
+      "group": "AppLovin / Vungle 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "stage-bid.applovin.com",
+      "group": "AppLovin / Vungle 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "stage-mediate-events.applovin.com",
+      "group": "AppLovin / Vungle 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "sts.applovin.com",
+      "group": "AppLovin / Vungle 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "t.applovin.com",
+      "group": "AppLovin / Vungle 广告",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain",
+      "match": "ads.api.vungle.com",
+      "group": "AppLovin / Vungle 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "api.vungle.com",
+      "group": "AppLovin / Vungle 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "applovin.com",
+      "group": "AppLovin / Vungle 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "cdn-lb.vungle.com",
+      "group": "AppLovin / Vungle 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "dsp.api.vungle.com",
+      "group": "AppLovin / Vungle 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "eks-prod-1b.vungle.com",
+      "group": "AppLovin / Vungle 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "eks-prod-1c.vungle.com",
+      "group": "AppLovin / Vungle 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "events.ads.vungle.com",
+      "group": "AppLovin / Vungle 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "events.api.vungle.com",
+      "group": "AppLovin / Vungle 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ingest.vungle.com",
+      "group": "AppLovin / Vungle 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "kourier-tpat.eks-prod-1b.vungle.com",
+      "group": "AppLovin / Vungle 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "kourier-tpat.eks-prod-1c.vungle.com",
+      "group": "AppLovin / Vungle 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "logs.ads.vungle.com",
+      "group": "AppLovin / Vungle 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "pdn.applovin.com",
+      "group": "AppLovin / Vungle 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "prod-a.applovin.com",
+      "group": "AppLovin / Vungle 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "prod-ms.applovin.com",
+      "group": "AppLovin / Vungle 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "stage-a.applovin.com",
+      "group": "AppLovin / Vungle 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "stage-assets.applovin.com",
+      "group": "AppLovin / Vungle 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "stage-img.applovin.com",
+      "group": "AppLovin / Vungle 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "stage-ms.applovin.com",
+      "group": "AppLovin / Vungle 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "stage-pdn.applovin.com",
+      "group": "AppLovin / Vungle 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "tpat.api.vungle.com",
+      "group": "AppLovin / Vungle 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ue.applovin.com",
+      "group": "AppLovin / Vungle 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "vungle.com",
+      "group": "AppLovin / Vungle 广告",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "aax-dtb-cf.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "aax-dtb-mobile-geo.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "aax-fe-sin.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "aax-ott-c2s.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "aax-ott-sdk.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "aax-ott.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "aax-us-east.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "aax-us.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "aax.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "ad-scope.com.cn",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "adn-plus.com.cn",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "ads.inmobi.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "adx-event.tradplusad.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "adx.adwangmai.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "aes.ap-southeast.3px.axp.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "aes.eu-central.3px.axp.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "aes.eu-south.ono.axp.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "aes.eu-west.3px.axp.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "aes.eu-west.ono.axp.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "aes.us-east.3px.axp.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "aes.us-east.ono.axp.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "aes.us-west.3px.axp.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "anythinktech.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "api.inmobi.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "app.inmobi.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "appgw.inmobi.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "aps.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "beizi.biz",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "brand.inmobi.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "cdn-a.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "cdn.inmobi.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "ck.inmobi.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "config.inmobi.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "connect.tapjoy.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "de.inmobi.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "domob.cn",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "enduser.adsrvr.org",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "event.tradplusad.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "exchange.inmobi.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "fe.ono.axp.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "iff.inmobi.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "ihasdsp.inmobi.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "inmobi.cn",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "inmobicdn.net",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "insight.adsrvr.org",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "ir-de.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "ir-fr.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "ir-in.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "ir-jp.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "ir-na.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "ir-uk.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "js.adsrvr.org",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "mads.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "match.adsrvr.org",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "noti-eu.adsmoloco.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "onedsp.inmobi.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "pbs.inmobi.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "prebid.inmobi.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "ps-us.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "pulse.inmobi.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "rcm-eu.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "rcm-fe.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "rcm-na.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "sdk.inmobi.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "sigmob.cn",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "sponsored-ads-eu-south-2.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "sponsored-ads-eu.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "sponsored-ads-fe.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "sponsored-ads-na.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "sq-tungsten-ts-eu.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "sq-tungsten-ts-fe.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "sq-tungsten-ts.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "ssp.inmobi.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "sync.inmobi.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "templates.inmobi.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "tk.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "toponad.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "toponadss.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "trafficmanager.inmobi.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "ts.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "vfw-ap.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "vfw-eu.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "vfw-us-west.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "vfw-us.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "vfw.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "vfwm-us-west.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "vfwm-us.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "vfwm.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "vfws.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "w.inmobi.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "web-inmobicdnnet-gcp-cdn.umc.inmobi.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "wms-na.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "ws-eu.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "ws-fe.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "ws-in.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "z-eu.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain_suffix",
+      "match": "z-na.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "hagezi-light"
+    },
+    {
+      "kind": "domain",
+      "match": "a.adsrvr.org",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "aax-cpm.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "aax-eu-retail-direct.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "aax-eu.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "aax-fe.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "aax-us-east-retail-direct.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "aax-us-east-rtb.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "aax-us-pdx.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ad.adsrvr.org",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "adsmoloco.com",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "adsrvr.org",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "analytics-prod2.glance-internal.inmobi.com",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "appgwv2.inmobi.com",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "bid.tapjoy.com",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "bidfnt-asia.adsmoloco.com",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "c.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ca4-bid.adsrvr.org",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "cdn-f.adsmoloco.com",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "config-ltvp.inmobi.com",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "config.eastus-ssp.appgwv2.inmobi.com",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "content-prod3.glance-internal.inmobi.com",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "content.tapjoy.com",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "data.adsrvr.org",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "de1-bid.adsrvr.org",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "direct.adsrvr.org",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "dra.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "eastus-ssp.appgwv2.inmobi.com",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "fls-eu.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "fls-fe.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "fls-na.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "glance-internal.inmobi.com",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "go.inmobi.com",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "html5.adsrvr.org",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "imces.dfw1.vip.inmobi.com",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "imces.inmobi.com",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "inmobi.com",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "jp1-bid-ga.adsrvr.org",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "jp1-bid.adsrvr.org",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "mcg-ads.inmobi.com",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "noti-us.adsmoloco.com",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ny1-bid.adsrvr.org",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "placements.tapjoy.com",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ps-eu.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ps-jp.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "rpc.tapjoy.com",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "s.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "s.update.adsrvr.org",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "sg2-bid.adsrvr.org",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ssp-prod-telemerty-eastus-appgwv2.inmobi.com",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "tapjoy.com",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "tr-asia.adsmoloco.com",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "tr-eu.adsmoloco.com",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "tr-us.adsmoloco.com",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "update.adsrvr.org",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "use-tor.adsrvr.org",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "usedirect.adsrvr.org",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "usw-ca2.adsrvr.org",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "uswdirect.adsrvr.org",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "v.adsrvr.org",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "va6-bid.adsrvr.org",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "vae-bid.adsrvr.org",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "wms-eu.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ws-na.amazon-adsystem.com",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "ws.tapjoy.com",
+      "group": "其他移动广告联盟",
+      "source": "stevenblack"
+    },
+    {
+      "kind": "domain",
+      "match": "adservice.google.com",
+      "group": "原版保留",
+      "source": "stevenblack"
+    }
+  ],
+  "v1_domains": [
     "ad.doubleclick.net",
     "googleads.g.doubleclick.net",
     "pubads.g.doubleclick.net",

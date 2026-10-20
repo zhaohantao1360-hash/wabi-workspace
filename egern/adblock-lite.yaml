@@ -1,9 +1,13 @@
-# Egern native YAML module, v1.0.0
-# Exact-host REJECT only. No MITM, scripts, DNS overrides, or remote rule sets.
-# Selected domain entries: StevenBlack/hosts (MIT), snapshot db80be797ba5c17ba3bfa5094ed94508b41e716f.
-# Source: https://raw.githubusercontent.com/StevenBlack/hosts/db80be797ba5c17ba3bfa5094ed94508b41e716f/hosts
-# This is a small selection, not the full upstream list and not an upstream endorsement.
-# Third-party license for selected entries:
+# Egern native YAML module v2.0.0 — frozen, independently licensed selection.
+# SPDX-License-Identifier: GPL-3.0-only
+# HaGeZi-derived portions and this combined module: GPL-3.0-only.
+# Modified selection/conversion: Wabi-assisted examples, 2026-10-20.
+# Full GPL license: https://github.com/zhaohantao1360-hash/wabi-workspace/blob/main/egern/LICENSE-GPL-3.0.txt
+# Corresponding editable source and reproducible builder: sources.json, build_adblock.py in the same directory.
+# StevenBlack portions retain the following MIT notice:
+# Selected domain entries from StevenBlack/hosts
+# https://raw.githubusercontent.com/StevenBlack/hosts/db80be797ba5c17ba3bfa5094ed94508b41e716f/hosts
+#
 # The MIT License (MIT)
 #
 # Copyright © 2026 Steven Black
@@ -26,62 +30,1603 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 name: "基础去广告 · 无需解密"
-description: "18 条精确广告域名阻断规则；不含证书或脚本，非全能去广告。"
-author: "Wabi-assisted examples"
+description: "v2.0.0：396 条广告网络规则，含边界安全的子域匹配；不含证书、脚本或远程规则集。非全能去广告。"
+author: "Wabi-assisted examples; HaGeZi; Steven Black"
 homepage: "https://github.com/zhaohantao1360-hash/wabi-workspace/tree/main/egern"
 manual: "https://github.com/zhaohantao1360-hash/wabi-workspace/blob/main/egern/README.md"
 rules:
+  # Google 广告
+  - domain_suffix:
+      match: "ad.ae.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain_suffix:
+      match: "ad.at.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain_suffix:
+      match: "ad.au.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain_suffix:
+      match: "ad.de.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain_suffix:
+      match: "afs.googleadservices.com"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain_suffix:
+      match: "dmp.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain_suffix:
+      match: "doubleclick-cn.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain_suffix:
+      match: "ff.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain_suffix:
+      match: "fls.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain_suffix:
+      match: "g.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain_suffix:
+      match: "googlesyndication.com"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain_suffix:
+      match: "m.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain_suffix:
+      match: "mediavisor.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain_suffix:
+      match: "n4052ad.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain_suffix:
+      match: "pagead2.googleadservices.com"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain_suffix:
+      match: "partnerad.l.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain_suffix:
+      match: "static.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain_suffix:
+      match: "stats.l.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain_suffix:
+      match: "td.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain_suffix:
+      match: "tpc.googlesyndication-cn.com"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "ad-ace.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "ad-apac.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "ad-emea.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "ad-g.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "ad.ar.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "ad.be.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "ad.bg.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "ad.br.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "ad.ca.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "ad.ch.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "ad.cl.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "ad.cn.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "ad.dk.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
   - domain:
       match: "ad.doubleclick.net"
       policy: REJECT
+      name: "Wabi广告 · Google 广告"
   - domain:
-      match: "googleads.g.doubleclick.net"
+      match: "ad.es.doubleclick.net"
       policy: REJECT
+      name: "Wabi广告 · Google 广告"
   - domain:
-      match: "pubads.g.doubleclick.net"
+      match: "ad.fi.doubleclick.net"
       policy: REJECT
+      name: "Wabi广告 · Google 广告"
   - domain:
-      match: "securepubads.g.doubleclick.net"
+      match: "ad.fr.doubleclick.net"
       policy: REJECT
+      name: "Wabi广告 · Google 广告"
   - domain:
-      match: "pagead2.googlesyndication.com"
+      match: "ad.gr.doubleclick.net"
       policy: REJECT
+      name: "Wabi广告 · Google 广告"
   - domain:
-      match: "tpc.googlesyndication.com"
+      match: "ad.hk.doubleclick.net"
       policy: REJECT
+      name: "Wabi广告 · Google 广告"
   - domain:
-      match: "adservice.google.com"
+      match: "ad.hr.doubleclick.net"
       policy: REJECT
+      name: "Wabi广告 · Google 广告"
   - domain:
-      match: "ade.googlesyndication.com"
+      match: "ad.hu.doubleclick.net"
       policy: REJECT
+      name: "Wabi广告 · Google 广告"
   - domain:
-      match: "cpro.baidu.com"
+      match: "ad.ie.doubleclick.net"
       policy: REJECT
+      name: "Wabi广告 · Google 广告"
   - domain:
-      match: "adm.baidu.com"
+      match: "ad.in.doubleclick.net"
       policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "ad.it.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "ad.jp.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "ad.kr.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "ad.mo.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "ad.my.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "ad.n2434.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "ad.nl.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "ad.no.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "ad.nz.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "ad.pl.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "ad.pt.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "ad.ro.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "ad.rs.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "ad.ru.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "ad.se.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "ad.sg.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "ad.si.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "ad.terra.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "ad.th.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "ad.tw.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "ad.uk.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "ad.us.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "ad.ve.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "ad.za.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "ad2.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "ads-bid.l.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "creatives.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "dart.l.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "dfp.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "fls.au.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "fls.uk.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "g1.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "gan.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "googleadservices.com"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "ir.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "iv.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "n4061ad.hk.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "n4061ad.jp.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "n4403ad.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "n479ad.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "pagead.l.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "pagead46.l.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "partner.googleadservices.com"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "paypalssl.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "s0.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "s2.video.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  - domain:
+      match: "www3.doubleclick.net"
+      policy: REJECT
+      name: "Wabi广告 · Google 广告"
+  # 腾讯广告
+  - domain_suffix:
+      match: "ads.privacy.qq.com"
+      policy: REJECT
+      name: "Wabi广告 · 腾讯广告"
+  - domain_suffix:
+      match: "c.gdt.qq.com"
+      policy: REJECT
+      name: "Wabi广告 · 腾讯广告"
+  - domain_suffix:
+      match: "c.l.qq.com"
+      policy: REJECT
+      name: "Wabi广告 · 腾讯广告"
+  - domain_suffix:
+      match: "c2.gdt.qq.com"
+      policy: REJECT
+      name: "Wabi广告 · 腾讯广告"
+  - domain_suffix:
+      match: "c2.l.qq.com"
+      policy: REJECT
+      name: "Wabi广告 · 腾讯广告"
+  - domain_suffix:
+      match: "canvas-cdn.gdt.qq.com"
+      policy: REJECT
+      name: "Wabi广告 · 腾讯广告"
+  - domain_suffix:
+      match: "cm.l.qq.com"
+      policy: REJECT
+      name: "Wabi广告 · 腾讯广告"
+  - domain_suffix:
+      match: "gdtimg.com"
+      policy: REJECT
+      name: "Wabi广告 · 腾讯广告"
+  - domain_suffix:
+      match: "i.gdt.qq.com"
+      policy: REJECT
+      name: "Wabi广告 · 腾讯广告"
+  - domain_suffix:
+      match: "ii.gdt.qq.com"
+      policy: REJECT
+      name: "Wabi广告 · 腾讯广告"
+  - domain_suffix:
+      match: "ipv4.gdt.qq.com"
+      policy: REJECT
+      name: "Wabi广告 · 腾讯广告"
+  - domain_suffix:
+      match: "livep.l.qq.com"
+      policy: REJECT
+      name: "Wabi广告 · 腾讯广告"
+  - domain_suffix:
+      match: "lives.l.qq.com"
+      policy: REJECT
+      name: "Wabi广告 · 腾讯广告"
+  - domain_suffix:
+      match: "livew.l.qq.com"
+      policy: REJECT
+      name: "Wabi广告 · 腾讯广告"
+  - domain_suffix:
+      match: "mi.gdt.qq.com"
+      policy: REJECT
+      name: "Wabi广告 · 腾讯广告"
+  - domain_suffix:
+      match: "monitor.l.qq.com"
+      policy: REJECT
+      name: "Wabi广告 · 腾讯广告"
+  - domain_suffix:
+      match: "nc.gdt.qq.com"
+      policy: REJECT
+      name: "Wabi广告 · 腾讯广告"
+  - domain_suffix:
+      match: "news.l.qq.com"
+      policy: REJECT
+      name: "Wabi广告 · 腾讯广告"
+  - domain_suffix:
+      match: "p.l.qq.com"
+      policy: REJECT
+      name: "Wabi广告 · 腾讯广告"
+  - domain_suffix:
+      match: "p2.l.qq.com"
+      policy: REJECT
+      name: "Wabi广告 · 腾讯广告"
+  - domain_suffix:
+      match: "pgdt.gtimg.cn"
+      policy: REJECT
+      name: "Wabi广告 · 腾讯广告"
+  - domain_suffix:
+      match: "rpt.gdt.qq.com"
+      policy: REJECT
+      name: "Wabi广告 · 腾讯广告"
+  - domain_suffix:
+      match: "t.gdt.qq.com"
+      policy: REJECT
+      name: "Wabi广告 · 腾讯广告"
+  - domain_suffix:
+      match: "tangram.e.qq.com"
+      policy: REJECT
+      name: "Wabi广告 · 腾讯广告"
+  - domain_suffix:
+      match: "ugdtimg.com"
+      policy: REJECT
+      name: "Wabi广告 · 腾讯广告"
+  - domain_suffix:
+      match: "us.l.qq.com"
+      policy: REJECT
+      name: "Wabi广告 · 腾讯广告"
+  - domain_suffix:
+      match: "v2.gdt.qq.com"
+      policy: REJECT
+      name: "Wabi广告 · 腾讯广告"
+  - domain_suffix:
+      match: "v2mi.gdt.qq.com"
+      policy: REJECT
+      name: "Wabi广告 · 腾讯广告"
+  - domain_suffix:
+      match: "v3.gdt.qq.com"
+      policy: REJECT
+      name: "Wabi广告 · 腾讯广告"
+  - domain_suffix:
+      match: "vr.gdt.qq.com"
+      policy: REJECT
+      name: "Wabi广告 · 腾讯广告"
+  - domain_suffix:
+      match: "win.gdt.qq.com"
+      policy: REJECT
+      name: "Wabi广告 · 腾讯广告"
+  - domain_suffix:
+      match: "xc.gdt.qq.com"
+      policy: REJECT
+      name: "Wabi广告 · 腾讯广告"
   - domain:
       match: "adsfile.qq.com"
       policy: REJECT
+      name: "Wabi广告 · 腾讯广告"
   - domain:
       match: "adslvfile.qq.com"
       policy: REJECT
+      name: "Wabi广告 · 腾讯广告"
+  - domain:
+      match: "hm.l.qq.com"
+      policy: REJECT
+      name: "Wabi广告 · 腾讯广告"
+  - domain:
+      match: "imc.l.qq.com"
+      policy: REJECT
+      name: "Wabi广告 · 腾讯广告"
+  - domain:
+      match: "l.qq.com"
+      policy: REJECT
+      name: "Wabi广告 · 腾讯广告"
+  - domain:
+      match: "l2.l.qq.com"
+      policy: REJECT
+      name: "Wabi广告 · 腾讯广告"
   - domain:
       match: "sdk.e.qq.com"
       policy: REJECT
+      name: "Wabi广告 · 腾讯广告"
   - domain:
-      match: "mi.gdt.qq.com"
+      match: "v.gdt.qq.com"
       policy: REJECT
+      name: "Wabi广告 · 腾讯广告"
   - domain:
+      match: "w.l.qq.com"
+      policy: REJECT
+      name: "Wabi广告 · 腾讯广告"
+  # 百度广告
+  - domain_suffix:
+      match: "afd.baidu.com"
+      policy: REJECT
+      name: "Wabi广告 · 百度广告"
+  - domain_suffix:
+      match: "als.baidu.com"
+      policy: REJECT
+      name: "Wabi广告 · 百度广告"
+  - domain_suffix:
+      match: "cpro.baidu.com"
+      policy: REJECT
+      name: "Wabi广告 · 百度广告"
+  - domain_suffix:
+      match: "eclick.baidu.com"
+      policy: REJECT
+      name: "Wabi广告 · 百度广告"
+  - domain_suffix:
+      match: "mobads-logs.baidu.com"
+      policy: REJECT
+      name: "Wabi广告 · 百度广告"
+  - domain_suffix:
+      match: "mobads-pre-config.cdn.bcebos.com"
+      policy: REJECT
+      name: "Wabi广告 · 百度广告"
+  - domain_suffix:
+      match: "mobads.baidu.com"
+      policy: REJECT
+      name: "Wabi广告 · 百度广告"
+  - domain:
+      match: "adm.baidu.com"
+      policy: REJECT
+      name: "Wabi广告 · 百度广告"
+  # 字节 Pangle 广告
+  - domain_suffix:
+      match: "pangle.io"
+      policy: REJECT
+      name: "Wabi广告 · 字节 Pangle 广告"
+  # 快手广告
+  - domain_suffix:
+      match: "adkwai.com"
+      policy: REJECT
+      name: "Wabi广告 · 快手广告"
+  - domain_suffix:
+      match: "adtrack.e.kuaishou.com"
+      policy: REJECT
+      name: "Wabi广告 · 快手广告"
+  - domain_suffix:
+      match: "gdfp.gifshow.com"
+      policy: REJECT
+      name: "Wabi广告 · 快手广告"
+  - domain_suffix:
+      match: "open.e.kuaishou.com"
+      policy: REJECT
+      name: "Wabi广告 · 快手广告"
+  - domain_suffix:
+      match: "p1-ad.adukwai.com"
+      policy: REJECT
+      name: "Wabi广告 · 快手广告"
+  - domain_suffix:
+      match: "p2-ad.adukwai.com"
+      policy: REJECT
+      name: "Wabi广告 · 快手广告"
+  - domain_suffix:
+      match: "p2-lm.adukwai.com"
+      policy: REJECT
+      name: "Wabi广告 · 快手广告"
+  - domain_suffix:
+      match: "p3-ad.adukwai.com"
+      policy: REJECT
+      name: "Wabi广告 · 快手广告"
+  - domain_suffix:
+      match: "p4-ad.adukwai.com"
+      policy: REJECT
+      name: "Wabi广告 · 快手广告"
+  - domain_suffix:
+      match: "p5-ad.adukwai.com"
+      policy: REJECT
+      name: "Wabi广告 · 快手广告"
+  - domain_suffix:
+      match: "p5-tube.adukwai.com"
+      policy: REJECT
+      name: "Wabi广告 · 快手广告"
+  - domain_suffix:
+      match: "v1-ad.adukwai.com"
+      policy: REJECT
+      name: "Wabi广告 · 快手广告"
+  - domain_suffix:
+      match: "v1-lm.adukwai.com"
+      policy: REJECT
+      name: "Wabi广告 · 快手广告"
+  - domain_suffix:
+      match: "v4-ad.adukwai.com"
+      policy: REJECT
+      name: "Wabi广告 · 快手广告"
+  - domain_suffix:
+      match: "v4-lm.adukwai.com"
+      policy: REJECT
+      name: "Wabi广告 · 快手广告"
+  - domain_suffix:
+      match: "v5-ad.adukwai.com"
+      policy: REJECT
+      name: "Wabi广告 · 快手广告"
+  # 阿里 Tanx / 汇川广告
+  - domain_suffix:
+      match: "cdn.tanx.com"
+      policy: REJECT
+      name: "Wabi广告 · 阿里 Tanx / 汇川广告"
+  - domain_suffix:
+      match: "click.tanx.com"
+      policy: REJECT
+      name: "Wabi广告 · 阿里 Tanx / 汇川广告"
+  - domain_suffix:
+      match: "cms.tanx.com"
+      policy: REJECT
+      name: "Wabi广告 · 阿里 Tanx / 汇川广告"
+  - domain_suffix:
+      match: "df.tanx.com"
+      policy: REJECT
+      name: "Wabi广告 · 阿里 Tanx / 汇川广告"
+  - domain_suffix:
+      match: "ef-dongfeng.tanx.com"
+      policy: REJECT
+      name: "Wabi广告 · 阿里 Tanx / 汇川广告"
+  - domain_suffix:
+      match: "et.tanx.com"
+      policy: REJECT
+      name: "Wabi广告 · 阿里 Tanx / 汇川广告"
+  - domain_suffix:
+      match: "hc-ssp.sm.cn"
+      policy: REJECT
+      name: "Wabi广告 · 阿里 Tanx / 汇川广告"
+  - domain_suffix:
+      match: "huichuan-mc.sm.cn"
+      policy: REJECT
+      name: "Wabi广告 · 阿里 Tanx / 汇川广告"
+  - domain_suffix:
+      match: "huichuan.sm.cn"
+      policy: REJECT
+      name: "Wabi广告 · 阿里 Tanx / 汇川广告"
+  - domain_suffix:
+      match: "ifs.tanx.com"
+      policy: REJECT
+      name: "Wabi广告 · 阿里 Tanx / 汇川广告"
+  - domain_suffix:
+      match: "kgb-ifs.tanx.com"
+      policy: REJECT
+      name: "Wabi广告 · 阿里 Tanx / 汇川广告"
+  - domain_suffix:
+      match: "live-ifs.tanx.com"
+      policy: REJECT
+      name: "Wabi广告 · 阿里 Tanx / 汇川广告"
+  - domain_suffix:
+      match: "opehs.tanx.com"
+      policy: REJECT
+      name: "Wabi广告 · 阿里 Tanx / 汇川广告"
+  - domain_suffix:
+      match: "p.tanx.com"
+      policy: REJECT
+      name: "Wabi广告 · 阿里 Tanx / 汇川广告"
+  - domain_suffix:
+      match: "rdstat.tanx.com"
+      policy: REJECT
+      name: "Wabi广告 · 阿里 Tanx / 汇川广告"
+  - domain_suffix:
+      match: "sdk-config.tanx.com"
+      policy: REJECT
+      name: "Wabi广告 · 阿里 Tanx / 汇川广告"
+  # 小米广告
+  - domain_suffix:
       match: "ad.xiaomi.com"
       policy: REJECT
-  - domain:
-      match: "sdkconfig.ad.xiaomi.com"
+      name: "Wabi广告 · 小米广告"
+  # Unity / ironSource 广告
+  - domain_suffix:
+      match: "ae.iads.unity3d.com"
       policy: REJECT
-  - domain:
-      match: "api.ad.xiaomi.com"
+      name: "Wabi广告 · Unity / ironSource 广告"
+  - domain_suffix:
+      match: "gw-is.iads.unity3d.com"
       policy: REJECT
-  - domain:
-      match: "adserver.unityads.unity3d.com"
+      name: "Wabi广告 · Unity / ironSource 广告"
+  - domain_suffix:
+      match: "gw-rv.iads.unity3d.com"
       policy: REJECT
+      name: "Wabi广告 · Unity / ironSource 广告"
+  - domain_suffix:
+      match: "icon-uap.iads.unity3d.com"
+      policy: REJECT
+      name: "Wabi广告 · Unity / ironSource 广告"
+  - domain_suffix:
+      match: "img-uap.iads.unity3d.com"
+      policy: REJECT
+      name: "Wabi广告 · Unity / ironSource 广告"
+  - domain_suffix:
+      match: "supersonicads.com"
+      policy: REJECT
+      name: "Wabi广告 · Unity / ironSource 广告"
+  - domain_suffix:
+      match: "unityads.unity3d.com"
+      policy: REJECT
+      name: "Wabi广告 · Unity / ironSource 广告"
+  - domain:
+      match: "cdn.iads.unity3d.com"
+      policy: REJECT
+      name: "Wabi广告 · Unity / ironSource 广告"
+  - domain:
+      match: "config.unityads.unitychina.cn"
+      policy: REJECT
+      name: "Wabi广告 · Unity / ironSource 广告"
+  - domain:
+      match: "img-dyn-uap.iads.unity3d.com"
+      policy: REJECT
+      name: "Wabi广告 · Unity / ironSource 广告"
+  - domain:
+      match: "o.iads.unity3d.com"
+      policy: REJECT
+      name: "Wabi广告 · Unity / ironSource 广告"
+  - domain:
+      match: "unityads.unitychina.cn"
+      policy: REJECT
+      name: "Wabi广告 · Unity / ironSource 广告"
+  - domain:
+      match: "vid-uap.iads.unity3d.com"
+      policy: REJECT
+      name: "Wabi广告 · Unity / ironSource 广告"
+  # AppLovin / Vungle 广告
+  - domain_suffix:
+      match: "a.applovin.com"
+      policy: REJECT
+      name: "Wabi广告 · AppLovin / Vungle 广告"
+  - domain_suffix:
+      match: "a4.applovin.com"
+      policy: REJECT
+      name: "Wabi广告 · AppLovin / Vungle 广告"
+  - domain_suffix:
+      match: "applvn.com"
+      policy: REJECT
+      name: "Wabi广告 · AppLovin / Vungle 广告"
+  - domain_suffix:
+      match: "assets.applovin.com"
+      policy: REJECT
+      name: "Wabi广告 · AppLovin / Vungle 广告"
+  - domain_suffix:
+      match: "b.applovin.com"
+      policy: REJECT
+      name: "Wabi广告 · AppLovin / Vungle 广告"
+  - domain_suffix:
+      match: "config.ads.vungle.com"
+      policy: REJECT
+      name: "Wabi广告 · AppLovin / Vungle 广告"
+  - domain_suffix:
+      match: "d.applovin.com"
+      policy: REJECT
+      name: "Wabi广告 · AppLovin / Vungle 广告"
+  - domain_suffix:
+      match: "img.applovin.com"
+      policy: REJECT
+      name: "Wabi广告 · AppLovin / Vungle 广告"
+  - domain_suffix:
+      match: "ms-usa.applovin.com"
+      policy: REJECT
+      name: "Wabi广告 · AppLovin / Vungle 广告"
+  - domain_suffix:
+      match: "ms.applovin.com"
+      policy: REJECT
+      name: "Wabi广告 · AppLovin / Vungle 广告"
+  - domain_suffix:
+      match: "ms4.applovin.com"
+      policy: REJECT
+      name: "Wabi广告 · AppLovin / Vungle 广告"
+  - domain_suffix:
+      match: "prod-bid.applovin.com"
+      policy: REJECT
+      name: "Wabi广告 · AppLovin / Vungle 广告"
+  - domain_suffix:
+      match: "prod-mediate-events.applovin.com"
+      policy: REJECT
+      name: "Wabi广告 · AppLovin / Vungle 广告"
+  - domain_suffix:
+      match: "r.applovin.com"
+      policy: REJECT
+      name: "Wabi广告 · AppLovin / Vungle 广告"
+  - domain_suffix:
+      match: "re.applovin.com"
+      policy: REJECT
+      name: "Wabi广告 · AppLovin / Vungle 广告"
+  - domain_suffix:
+      match: "res1.applovin.com"
+      policy: REJECT
+      name: "Wabi广告 · AppLovin / Vungle 广告"
+  - domain_suffix:
+      match: "res4.applovin.com"
+      policy: REJECT
+      name: "Wabi广告 · AppLovin / Vungle 广告"
+  - domain_suffix:
+      match: "rt.applovin.com"
+      policy: REJECT
+      name: "Wabi广告 · AppLovin / Vungle 广告"
+  - domain_suffix:
+      match: "stage-bid.applovin.com"
+      policy: REJECT
+      name: "Wabi广告 · AppLovin / Vungle 广告"
+  - domain_suffix:
+      match: "stage-mediate-events.applovin.com"
+      policy: REJECT
+      name: "Wabi广告 · AppLovin / Vungle 广告"
+  - domain_suffix:
+      match: "sts.applovin.com"
+      policy: REJECT
+      name: "Wabi广告 · AppLovin / Vungle 广告"
+  - domain_suffix:
+      match: "t.applovin.com"
+      policy: REJECT
+      name: "Wabi广告 · AppLovin / Vungle 广告"
+  - domain:
+      match: "ads.api.vungle.com"
+      policy: REJECT
+      name: "Wabi广告 · AppLovin / Vungle 广告"
+  - domain:
+      match: "api.vungle.com"
+      policy: REJECT
+      name: "Wabi广告 · AppLovin / Vungle 广告"
+  - domain:
+      match: "applovin.com"
+      policy: REJECT
+      name: "Wabi广告 · AppLovin / Vungle 广告"
+  - domain:
+      match: "cdn-lb.vungle.com"
+      policy: REJECT
+      name: "Wabi广告 · AppLovin / Vungle 广告"
+  - domain:
+      match: "dsp.api.vungle.com"
+      policy: REJECT
+      name: "Wabi广告 · AppLovin / Vungle 广告"
+  - domain:
+      match: "eks-prod-1b.vungle.com"
+      policy: REJECT
+      name: "Wabi广告 · AppLovin / Vungle 广告"
+  - domain:
+      match: "eks-prod-1c.vungle.com"
+      policy: REJECT
+      name: "Wabi广告 · AppLovin / Vungle 广告"
+  - domain:
+      match: "events.ads.vungle.com"
+      policy: REJECT
+      name: "Wabi广告 · AppLovin / Vungle 广告"
+  - domain:
+      match: "events.api.vungle.com"
+      policy: REJECT
+      name: "Wabi广告 · AppLovin / Vungle 广告"
+  - domain:
+      match: "ingest.vungle.com"
+      policy: REJECT
+      name: "Wabi广告 · AppLovin / Vungle 广告"
+  - domain:
+      match: "kourier-tpat.eks-prod-1b.vungle.com"
+      policy: REJECT
+      name: "Wabi广告 · AppLovin / Vungle 广告"
+  - domain:
+      match: "kourier-tpat.eks-prod-1c.vungle.com"
+      policy: REJECT
+      name: "Wabi广告 · AppLovin / Vungle 广告"
+  - domain:
+      match: "logs.ads.vungle.com"
+      policy: REJECT
+      name: "Wabi广告 · AppLovin / Vungle 广告"
+  - domain:
+      match: "pdn.applovin.com"
+      policy: REJECT
+      name: "Wabi广告 · AppLovin / Vungle 广告"
+  - domain:
+      match: "prod-a.applovin.com"
+      policy: REJECT
+      name: "Wabi广告 · AppLovin / Vungle 广告"
+  - domain:
+      match: "prod-ms.applovin.com"
+      policy: REJECT
+      name: "Wabi广告 · AppLovin / Vungle 广告"
+  - domain:
+      match: "stage-a.applovin.com"
+      policy: REJECT
+      name: "Wabi广告 · AppLovin / Vungle 广告"
+  - domain:
+      match: "stage-assets.applovin.com"
+      policy: REJECT
+      name: "Wabi广告 · AppLovin / Vungle 广告"
+  - domain:
+      match: "stage-img.applovin.com"
+      policy: REJECT
+      name: "Wabi广告 · AppLovin / Vungle 广告"
+  - domain:
+      match: "stage-ms.applovin.com"
+      policy: REJECT
+      name: "Wabi广告 · AppLovin / Vungle 广告"
+  - domain:
+      match: "stage-pdn.applovin.com"
+      policy: REJECT
+      name: "Wabi广告 · AppLovin / Vungle 广告"
+  - domain:
+      match: "tpat.api.vungle.com"
+      policy: REJECT
+      name: "Wabi广告 · AppLovin / Vungle 广告"
+  - domain:
+      match: "ue.applovin.com"
+      policy: REJECT
+      name: "Wabi广告 · AppLovin / Vungle 广告"
+  - domain:
+      match: "vungle.com"
+      policy: REJECT
+      name: "Wabi广告 · AppLovin / Vungle 广告"
+  # 其他移动广告联盟
+  - domain_suffix:
+      match: "aax-dtb-cf.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "aax-dtb-mobile-geo.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "aax-fe-sin.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "aax-ott-c2s.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "aax-ott-sdk.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "aax-ott.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "aax-us-east.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "aax-us.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "aax.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "ad-scope.com.cn"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "adn-plus.com.cn"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "ads.inmobi.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "adx-event.tradplusad.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "adx.adwangmai.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "aes.ap-southeast.3px.axp.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "aes.eu-central.3px.axp.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "aes.eu-south.ono.axp.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "aes.eu-west.3px.axp.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "aes.eu-west.ono.axp.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "aes.us-east.3px.axp.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "aes.us-east.ono.axp.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "aes.us-west.3px.axp.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "anythinktech.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "api.inmobi.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "app.inmobi.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "appgw.inmobi.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "aps.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "beizi.biz"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "brand.inmobi.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "cdn-a.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "cdn.inmobi.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "ck.inmobi.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "config.inmobi.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "connect.tapjoy.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "de.inmobi.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "domob.cn"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "enduser.adsrvr.org"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "event.tradplusad.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "exchange.inmobi.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "fe.ono.axp.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "iff.inmobi.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "ihasdsp.inmobi.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "inmobi.cn"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "inmobicdn.net"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "insight.adsrvr.org"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "ir-de.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "ir-fr.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "ir-in.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "ir-jp.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "ir-na.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "ir-uk.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "js.adsrvr.org"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "mads.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "match.adsrvr.org"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "noti-eu.adsmoloco.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "onedsp.inmobi.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "pbs.inmobi.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "prebid.inmobi.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "ps-us.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "pulse.inmobi.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "rcm-eu.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "rcm-fe.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "rcm-na.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "sdk.inmobi.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "sigmob.cn"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "sponsored-ads-eu-south-2.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "sponsored-ads-eu.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "sponsored-ads-fe.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "sponsored-ads-na.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "sq-tungsten-ts-eu.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "sq-tungsten-ts-fe.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "sq-tungsten-ts.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "ssp.inmobi.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "sync.inmobi.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "templates.inmobi.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "tk.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "toponad.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "toponadss.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "trafficmanager.inmobi.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "ts.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "vfw-ap.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "vfw-eu.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "vfw-us-west.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "vfw-us.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "vfw.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "vfwm-us-west.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "vfwm-us.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "vfwm.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "vfws.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "w.inmobi.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "web-inmobicdnnet-gcp-cdn.umc.inmobi.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "wms-na.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "ws-eu.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "ws-fe.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "ws-in.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "z-eu.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain_suffix:
+      match: "z-na.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "a.adsrvr.org"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "aax-cpm.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "aax-eu-retail-direct.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "aax-eu.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "aax-fe.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "aax-us-east-retail-direct.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "aax-us-east-rtb.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "aax-us-pdx.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "ad.adsrvr.org"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "adsmoloco.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "adsrvr.org"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "analytics-prod2.glance-internal.inmobi.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "appgwv2.inmobi.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "bid.tapjoy.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "bidfnt-asia.adsmoloco.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "c.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "ca4-bid.adsrvr.org"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "cdn-f.adsmoloco.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "config-ltvp.inmobi.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "config.eastus-ssp.appgwv2.inmobi.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "content-prod3.glance-internal.inmobi.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "content.tapjoy.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "data.adsrvr.org"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "de1-bid.adsrvr.org"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "direct.adsrvr.org"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "dra.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "eastus-ssp.appgwv2.inmobi.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "fls-eu.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "fls-fe.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "fls-na.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "glance-internal.inmobi.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "go.inmobi.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "html5.adsrvr.org"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "imces.dfw1.vip.inmobi.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "imces.inmobi.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "inmobi.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "jp1-bid-ga.adsrvr.org"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "jp1-bid.adsrvr.org"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "mcg-ads.inmobi.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "noti-us.adsmoloco.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "ny1-bid.adsrvr.org"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "placements.tapjoy.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "ps-eu.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "ps-jp.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "rpc.tapjoy.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "s.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "s.update.adsrvr.org"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "sg2-bid.adsrvr.org"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "ssp-prod-telemerty-eastus-appgwv2.inmobi.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "tapjoy.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "tr-asia.adsmoloco.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "tr-eu.adsmoloco.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "tr-us.adsmoloco.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "update.adsrvr.org"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "use-tor.adsrvr.org"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "usedirect.adsrvr.org"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "usw-ca2.adsrvr.org"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "uswdirect.adsrvr.org"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "v.adsrvr.org"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "va6-bid.adsrvr.org"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "vae-bid.adsrvr.org"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "wms-eu.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "ws-na.amazon-adsystem.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  - domain:
+      match: "ws.tapjoy.com"
+      policy: REJECT
+      name: "Wabi广告 · 其他移动广告联盟"
+  # 原版保留
+  - domain:
+      match: "adservice.google.com"
+      policy: REJECT
+      name: "Wabi广告 · 原版保留"
